@@ -6,8 +6,8 @@
 
 #### 使用说明
 
-- 打开'dist/cmd.exe' 可以直接运行
-- 或运行'src/cmd.py'
+- 打开`dist/cmd.exe` 可以直接运行
+- 或运行`src/cmd.py`
 
  #### 参与贡献
 
