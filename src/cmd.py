@@ -15,9 +15,9 @@ def readAsciiText(url):
         f.close()
         return text
     except BaseException as err:
-        return err
+        return str(err)
 
-print(readAsciiText('Cmd.py/src/asciiText/welcome.txt') + '''
+print(readAsciiText('asciiText/welcome.txt') + '''
 
 欢迎来到cmd！这是一个模拟控制台的程序，模仿 http://cmd.to ，输入 $ help 查看帮助
 
@@ -26,7 +26,7 @@ QQ：3440652547
 ''')
 
 def help():
-    print(readAsciiText('Cmd.py/src/asciiText/help.txt') + '''
+    print(readAsciiText('asciiText/help.txt') + '''
 * $ help \t 帮助
 * $ clear \t 清空
 * $ bye \t 退出
@@ -82,7 +82,7 @@ def clear():
     os.system('cls')
 
 def bye():
-    print(readAsciiText('Cmd.py/src/asciiText/bye.txt'))
+    print(readAsciiText('asciiText/bye.txt'))
     exit()
     return 'Bye bye ~'
 
@@ -106,7 +106,7 @@ def countCommand(command):
             continue
         theCommand += '.'
     theCommand += '()'
-    price = exec(theCommand)
+    exec(theCommand)
 
 while True:
     inputCommand = _input('')

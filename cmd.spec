@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['src\\cmd.py'],
-             pathex=['E:\\Python-Workspace\\cmd'],
+             pathex=['E:\\Python-Workspace\\Cmd'],
              binaries=[],
              datas=[],
              hiddenimports=[],
