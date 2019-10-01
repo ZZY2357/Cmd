@@ -7,6 +7,7 @@
 import time
 import os
 import random
+import hilo
 
 def readAsciiText(url):
     try:
@@ -68,16 +69,7 @@ class System:
 
 class Game:
     def HiLo(self):
-        rightNumber = random.randint(1, 1000)
-        while True:
-            userNumber = int(_input('输入一个1~1000的数: '))
-            if userNumber == rightNumber:
-                break
-            elif userNumber > rightNumber:
-                print(' ==> 大了')
-            else:
-                print(' ==> 小了')
-        print(' ==> 答对了')
+        hilo.game()
 def clear():
     os.system('cls')
 
@@ -112,5 +104,6 @@ while True:
     inputCommand = _input('')
     try:
         countCommand(inputCommand)
-    except:
+    except Exception as err:
+        print(err)
         print(' 错误，请检查语句是否正确或存在 ')
